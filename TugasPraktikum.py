@@ -21,7 +21,7 @@ class LinkedList:
         node = self.head
         while node:
             print(node.data)
-            node = node.nex
+            node = node.next
     
     def delete_by_value(self, data):
         node = self.head
@@ -33,7 +33,7 @@ class LinkedList:
                 node.next = node.next.next
                 return
             node = node.next
-
+            
     def delete_duplicates(self):
         node = self.head
         seen = set()
@@ -43,4 +43,13 @@ class LinkedList:
             else:
                 seen.add(node.data)
             node = node.next
+    def switch_tail_to_head(self):
+        node = self.head
+        while node.next.next:
+            node = node.next
+        node.next.next = self.head
+        self.head = node.next
+        node.next = None
+        
+        
             
