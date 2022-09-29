@@ -33,3 +33,21 @@ class LinkedList:
                 node.next = node.next.next
                 return
             node = node.next
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             def switch_tail_to_head(self):
+        node = self.head
+        while node.next.next:
+            node = node.next
+        node.next.next = self.head
+        self.head = node.next
+        node.next = None
