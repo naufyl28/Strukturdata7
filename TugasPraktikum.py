@@ -21,4 +21,16 @@ class LinkedList:
         node = self.head
         while node:
             print(node.data)
-            node = node.nex
+            node = node.next
+    
+    def delete_by_value(self, data):
+        node = self.head
+        if node.data == data:
+            self.head = node.next
+            return
+        while node.next:
+            if node.next.data == data:
+                node.next = node.next.next
+                return
+            node = node.next
+            
