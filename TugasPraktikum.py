@@ -51,5 +51,25 @@ class LinkedList:
         self.head = node.next
         node.next = None
         
+ llist = LinkedList()
+print("Data awal")
+llist.insert(1)
+llist.insert(2)
+llist.insert(3)
+llist.insert(4)
+llist.insert(4)
+llist.insert(1)
+llist.printlist()
+print("Data setelah dihapus")
+llist.delete_by_value(3)
+llist.printlist()
+print("Data setelah dihapus duplikat")
+llist.delete_duplicates()
+llist.printlist()
+print("Data setelah ditukar")
+llist.switch_tail_to_head()
+llist.printlist()
+
+        
         
             
