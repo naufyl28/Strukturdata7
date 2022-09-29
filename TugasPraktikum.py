@@ -33,3 +33,14 @@ class LinkedList:
                 node.next = node.next.next
                 return
             node = node.next
+
+    def delete_duplicates(self):
+        node = self.head
+        seen = set()
+        while node:
+            if node.data in seen:
+                self.delete_by_value(node.data)
+            else:
+                seen.add(node.data)
+            node = node.next
+            
